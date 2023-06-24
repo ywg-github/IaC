@@ -1,5 +1,5 @@
 resource "azurerm_subnet" "Kubernetes_subnet" {
-  name                 = "EM-${(var.project_name)}-K8S-PROD-1"
+  name                 = "ywg-${(var.project_name)}-k8s-dev-1"
   address_prefixes     = ["10.93.22.0/23"]
   resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.prod_k8s_vnet.name
@@ -7,7 +7,7 @@ resource "azurerm_subnet" "Kubernetes_subnet" {
 }
 
 resource "azurerm_subnet" "Vmss_devops_agent_subnet" {
-  name                 = "EM-${(var.project_name)}-INT-PROD-1"
+  name                 = "ywg-${(var.project_name)}-int-dev-1"
   address_prefixes     = ["10.93.24.64/28"]
   resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.prod_k8s_vnet.name

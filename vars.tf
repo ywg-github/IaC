@@ -6,15 +6,15 @@ variable "location" {
   description = "Region where all resources will be deployed..."
 }
 variable "vnet_name" {
-  default     = "emp-app-vnet"
+  default     = "ywg-app-vnet-dev"
   description = "Production virtual network name..."
 }
 variable "resource_group_name" {
-  default     = "emp-app-k8s-rg"
+  default     = "ywg-app-k8s-rg-dev"
   description = "Production kubernetes cluster resource group..."
 }
 variable "route_table_name" {
-  default = "em-route-app-prod"
+  default = "ywg-route-app-dev"
 }
 
 locals {

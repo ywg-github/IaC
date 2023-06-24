@@ -12,14 +12,14 @@ resource "azurerm_route_table" "route_table" {
   }
 
   route {
-    name                   = "To-Prod"
+    name                   = "To-Dev"
     address_prefix         = "10.90.0.0/19"
     next_hop_type          = "VirtualAppliance"
     next_hop_in_ip_address = "10.90.2.6"
   }
 
   route {
-    name                   = "To-Prod2"
+    name                   = "To-Dev2"
     address_prefix         = "10.90.32.0/20"
     next_hop_type          = "VirtualAppliance"
     next_hop_in_ip_address = "10.90.2.6"
@@ -33,7 +33,7 @@ resource "azurerm_route_table" "route_table" {
   }
 
   route {
-    name                   = "EM-APP-INT-PROD"
+    name                   = "ywg-app-int-dev"
     address_prefix         = "10.93.24.0/28"
     next_hop_type          = "VirtualAppliance"
     next_hop_in_ip_address = "10.90.2.6"
@@ -45,7 +45,7 @@ resource "azurerm_route_table" "route_table" {
 
 }
 
-resource "azurerm_subnet_route_table_association" "k8s_subnet_route_table" {
+resource "azurerm_subnet_route_table_association" "ywg-k8s_subnet_route_table" {
   subnet_id      = azurerm_subnet.Kubernetes_subnet.id
   route_table_id = azurerm_route_table.route_table.id
 
