@@ -5,7 +5,7 @@ output "resource_group_name" {
   value = var.resource_group_name
 }
 output "vnet_name" {
-  value = azurerm_virtual_network.prod_k8s_vnet.name
+  value = azurerm_virtual_network.ywg_k8s_vnet_dev.name
 }
 output "k8s_subnetId" {
   value = azurerm_subnet.Kubernetes_subnet.id

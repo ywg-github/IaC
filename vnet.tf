@@ -6,7 +6,7 @@ resource "azurerm_virtual_network" "ywg_k8s_vnet_dev" {
   tags = {
     project     = "Applications"
     environment = "dev"
-    resource    = "Production virtual network for k8 cluster configuration"
+    resource    = "Dev virtual network for k8 cluster configuration"
   }
 
 }
